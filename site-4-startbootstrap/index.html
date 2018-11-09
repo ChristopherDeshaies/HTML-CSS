@@ -1,0 +1,342 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Découverte de Bootstrap</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- utilisation de bootstrap.min.css car plus lite pour la mise en prod 
+    Pour le dev regarder bootstrap.css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+    <body>
+        <header class="sticky-top">
+        
+            <!-- Navbar
+            la classe navbar-expand-* permet de déterminer à partir de quel breakpoint est affiché le menu en dehors du hamburger -->
+            <nav class="navbar navbar-light bg-light navbar-expand-md">
+                <div class="container">
+
+                    <a href="" class="navbar-brand">Start Bootstrap</a>
+
+                    <!-- Bouton "Hamburger" -->
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse" id="menu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+                                
+                                <!-- Menu déroulant -->
+                                <div class="dropdown-menu">
+                                    <a href="" class="dropdown-item">Sur place</a>
+                                    <a href="" class="dropdown-item">A emporter</a>
+                                </div>
+                                    
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Présentation</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+    
+        </header>
+        
+        <main>
+            
+           
+            <!-- Mettre une liste en ligne -->
+            <ul class="list-inline">
+                <li class="list-inline-item">Accueil</li>
+                <li class="list-inline-item">Services</li>
+                <li class="list-inline-item">Présentation</li>
+            </ul>
+
+            <!-- 
+            Align du texte : texte-center, text-right, text-justify 
+            Mise en majuscule : text-uppercase
+            -->
+            <p class="text-center text-uppercase">Bonjour tout le monde !</p>
+
+
+
+            <div class="table-responsive">
+                <!-- Tableaux
+                classe table pour donner le style par défaut de BS au tableau
+                classes additionnelles possibles : table-bordered, table striped, table-hover 
+                table-dark, thead-dark -->
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Âge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- changer la couleur de la ligne : table-success, table-danger, table-warning, table-info -->
+                            <td class="table-success">Emmanuel</td>
+                            <td>Macron</td>
+                            <td>40</td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td>François</td>
+                            <td>Holland</td>
+                            <td>64</td>
+                        </tr>
+                        <tr>
+                            <td>Nicolas</td>
+                            <td>Sarkozy</td>
+                            <td>63</td>
+                        </tr>
+                        <tr>
+                            <td>Jacques</td>
+                            <td>Chirac</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>Valéry</td>
+                            <td>Giscard d'Estaing</td>
+                            <td>92</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- Formulaires -->
+            <form method="post" action="fichierDeTraitementDesDonnees.php">
+                <div class="form-group">
+                    <label for="labelEmail">Email</label>
+                    <input type="email" name="mail" id="labelEmail" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="labelPwd">Mot de Passe</label>
+                    <input type="password" name="pwd" id="labelPwd" class="form-control"/>
+                </div>
+
+                <input type="submit" value="Se connecter" class="btn btn-primary"/>
+            </form>
+
+            <!-- Les liens -->
+            <a href="http://google.fr" class="btn btn-primary btn-sm">Lien style bouton couleur primaire et petit</a>
+            <a href="http://google.fr" class="btn btn-secondary">Lien style bouton couleur secondaire et taille par défaut</a>
+            <a href="http://google.fr" class="btn btn-success btn-lg">Lien style bouton couleur vert et en grand</a>
+            <a href="http://google.fr" class="btn btn-link">Lien sous la forme d'un lien :)</a>
+            <!-- version outline avec la classe btn-outline-* -->
+            <a href="http://google.fr" class="btn btn-outline-danger">Lien style bouton rouge sur la bordure uniquement</a>    
+
+            <!-- Image 
+            classes utiles : rounded (bords arrondis), rounded-circle (cercle, rond), ing-thumbnail (bordure et marges intérieures) -->
+            <figure class="figure">
+                <img src="http://www.les-reponses.fr/wp-content/uploads/2014/10/logo-carre-jaune-penche.jpg" class="figure-img rounded-circle"/>
+                <figcaption class="figure-caption">Logo de la FNAC</figcaption>
+            </figure>
+
+            <!-- La classe container permet d'avoir un conteneur avec des marges à gauche et à droite et contraint à 1140px 
+            il existe aussi la classe container-fluid qui n'est pas containt en largeur -->
+            <div class="container">
+                <!--Système de grille 
+                On crée une ligne afin de disposer de 12 colonnes que l'on va pouvoir répartir comme on le veut
+                -->
+                <div class="row">
+                    <!-- définir pour toutes les tailles d'écrans -->
+                    <!--<div class="col-8">1 élément de 8 colonnes</div>
+                    <div class="col-4">1 élément de 4 colonnes</div>-->
+                    <!-- définir pour toutes les tailles d'écrans à partir de la sm : phablet
+                    (md : tablette
+                    lg : netbook
+                    xl : grand écran ) -->
+
+                    <!-- 2 définitions pour deux tailles d'écrans différentes -->
+                    <div class="col-sm-6 col-lg-8">1 élément de 6 colonnes à partir de la phablet et 8 colonnes à partir du netbook</div>
+                    <div class="col-sm-6 col-lg-4">1 élément de 6 colonnes à partir de la phablet et 4 colonnes à partir du netbook</div>
+                </div>
+
+                <!-- L'exemple ci-dessous crée 2 colonnes de largeur égale sur toutes les tailles d'écran -->
+                <div class="row">
+                    <div class="col">1 élément / 2</div>
+                    <div class="col">1 élément / 2</div>
+                </div>
+
+                <!-- L'exemple ci-dessous crée 2 colonnes de largeur égale sur toutes les tailles d'écran à partir de la phablet -->
+                <div class="row">
+                    <div class="col-sm">1 élément / 3</div>
+                    <div class="col-sm-6">1 élément / 3(plus grand)</div>
+                    <div class="col-sm">1 élément / 3</div>
+                </div>
+
+                <!-- Centrer verticalement des colonnes dans une ligne ! -->
+                <div class="row sexy-row align-items-center">
+                    <div class="col">1 élément / 3</div>
+                    <div class="col">1 élément / 3</div>
+                    <div class="col">1 élément / 3</div>
+                </div>
+
+                <!-- Même chose pour des colonnes et non la ligne complète -->
+                <div class="row sexy-row">
+                    <div class="col align-self-start">1 élément / 3</div>
+                    <div class="col align-self-center">1 élément / 3</div>
+                    <div class="col align-self-end">1 élément / 3</div>
+                </div>
+
+                <!-- Changer l'alignement horizontal -->
+                <div class="row sexy-row justify-content-around">
+                    <div class="col-4">1 élément / 2</div>
+                    <div class="col-4">1 élément / 2</div>
+                </div>
+
+                <!-- Imbrication du système de grille -->
+                <div class="row sexy-row">
+                    <div class="col-md-6 offset-md-3">Niveau 1 - 1 élément de 6 colonnes à partir de la tablette décalé de 3 colonnes sur la droite
+
+                        <div class="row">
+                            <div class="col-md">
+                                Niv 2 : 1 élément de 6 colonnes à partir de la tablette
+                            </div>
+                            <div class="col-md">
+                                Niv 2 : 1 élément de 6 colonnes à partir de la tablette
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row sexy-row">
+                    <div class="col-sm-6 col-md bg-success" >bloc 1</div>
+                    <div class="col-sm-6 col-md bg-info" >bloc 2</div>
+                    <div class="col-sm-6 col-md bg-warning d-sm-none" >bloc 3</div>
+                    <!-- on cache le bloc 4 sur mobile -->
+                    <div class="col-sm-6 col-md bg-danger d-none d-sm-block" >bloc 4</div>
+                </div>
+
+            </div>
+
+
+            <!-- Jumbotron -->
+            <div class="jumbotron">
+            
+                <h1 class="display-3">Découverte de Bootstrap</h1>
+                <p class="lead">Partons à la découverte du framework CSS Bootstrap ...</p>
+            
+            </div>
+
+            <!-- Composant Media (image à gauche et titre/paragraphe à droite) -->
+            <div class="media">
+                <!-- mr pour margin-right et 3 représente 1rem (1 réprésente 0.25rem, 2 représente 0.5rem et 3 représente 1rem)
+                existe aussi ml pour margin-left
+                existe aussi mt pour margin-top
+                existe aussi mb pour margin-bottom
+
+                existe aussi mx pour la gauche et la droite en même temps
+                existe aussi my pour le haut et le bas en même temps
+                existe aussi m- pour les 4 cotés
+
+                aussi la possibilité de rajouter un breakpoint particulier exemple : mr-md-3, etc...
+
+                aussi valable pour le padding en remplacant le m par un p
+
+                -->
+                <img class="mr-3" src="http://www.les-reponses.fr/wp-content/uploads/2014/10/logo-carre-jaune-penche.jpg"/>
+                <div>
+                    <h3>Fnac, c’est bon d’être curieux</h3>
+                    <p>7j/7 24h/24</p>
+                </div>
+            
+            </div>
+        
+            <div class="container">
+                <div class="card-deck">
+
+                    <div class="card">
+                        <img src="http://www.les-reponses.fr/wp-content/uploads/2014/10/logo-carre-jaune-penche.jpg"/>
+                        <div class="card-body">
+                            <h3 class="card-title">Fnac, c’est bon d’être curieux</h3>
+                            <p class="card-text">7j/7 24h/24</p>
+                            <a href="http://www.fnac.fr" target="_blank" class="btn btn-outline-danger">En savoir plus</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="http://www.les-reponses.fr/wp-content/uploads/2014/10/logo-carre-jaune-penche.jpg"/>
+                        <div class="card-body">
+                            <h3 class="card-title">Fnac, c’est bon d’être curieux</h3>
+                            <p class="card-text">7j/7 24h/24</p>
+                            <a href="http://www.fnac.fr" target="_blank" class="btn btn-outline-danger">En savoir plus</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="http://www.les-reponses.fr/wp-content/uploads/2014/10/logo-carre-jaune-penche.jpg"/>
+                        <div class="card-body">
+                            <h3 class="card-title">Fnac, c’est bon d’être curieux</h3>
+                            <p class="card-text">7j/7 24h/24</p>
+                            <a href="http://www.fnac.fr" target="_blank" class="btn btn-outline-danger">En savoir plus</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="http://www.les-reponses.fr/wp-content/uploads/2014/10/logo-carre-jaune-penche.jpg"/>
+                        <div class="card-body">
+                            <h3 class="card-title">Fnac, c’est bon d’être curieux</h3>
+                            <p class="card-text">7j/7 24h/24</p>
+                            <a href="http://www.fnac.fr" target="_blank" class="btn btn-outline-danger">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card w-25">
+                        <img src="http://www.les-reponses.fr/wp-content/uploads/2014/10/logo-carre-jaune-penche.jpg"/>
+                        <div class="card-body">
+                            <h3 class="card-title">Fnac, c’est bon d’être curieux</h3>
+                            <p class="card-text">7j/7 24h/24</p>
+                            <a href="http://www.fnac.fr" target="_blank" class="btn btn-outline-danger">En savoir plus</a>
+                        </div>
+                </div>
+            </div>
+            
+            
+            <!-- Système d'onglets -->
+            <ul class="nav nav-tabs">
+                <li>
+                    <a href="#entree" class="nav-link active" data-toggle="tab">Entrée</a>
+                </li>
+                <li>
+                    <a href="#plat" class="nav-link" data-toggle="tab">Plat</a>
+                </li>
+                <li>
+                    <a href="#dessert" class="nav-link" data-toggle="tab">Dessert</a>
+                </li>
+            </ul>
+            
+            <!--Contenu des onglets -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="entree">Nos entrées</div>
+                <div class="tab-pane" id="plat">Nos plats</div>
+                <div class="tab-pane" id="dessert">Nos desserts</div>
+            </div>
+            
+        </main>
+    
+    
+    
+        <!-- Need some JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+    
+    </body>
+
+</html>

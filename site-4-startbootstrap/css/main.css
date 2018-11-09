@@ -1,0 +1,20 @@
+.sexy-row{
+    min-height: 5rem;
+    margin-bottom: 1rem;
+    background-color:darkmagenta;
+    color: white;
+}
+
+/* dès que vous rencontrez un sélecteur avec des [] on cible un attribut : ici on recherche l'attribute commençant par col */
+/* ^= signifique qu'on recherche les éléments fils de sexy-row qui ont une classe qui COMMENCE par col */
+.sexy-row [class^=col]{
+    background-color:mediumslateblue;
+}
+
+.sexy-row > [class^=col]{
+    background-color: darkblue;
+}
+
+.nav-link{
+    text-align: center;
+}

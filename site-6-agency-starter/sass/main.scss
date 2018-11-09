@@ -1,0 +1,549 @@
+$couleur-primaire:#4DBECD;
+$couleur-secondaire:#F4961A;
+$couleur-defaut:#666666;
+$couleur-entete:#41516a;
+
+$min-height:60rem;
+
+$up-font-size:1rem;
+
+$xl:1200px;
+$lg:992px;
+$md:768px;
+$sm:576px;
+
+
+// Police d'écriture 
+@mixin hind{
+    font-family: 'Hind', fantasy;
+}
+
+@mixin poppins{
+    font-family: 'Poppins', sans-serif; 
+}
+
+@mixin none-margin{
+    margin:0;
+}
+
+@mixin gras{
+    font-weight: bold;
+}
+
+@mixin maj{
+    text-transform: uppercase;
+}
+
+@mixin padding-bloc{
+    padding: 10rem 10rem;
+}
+
+
+
+* {
+    /* Faire en sorte que le padding et la bordure soient calculés à l'interieur du conteneur. On change le mode de calcul à l'aide de box-sizing */
+    box-sizing: border-box;
+    /* Police par défaut */
+    @include poppins;
+}
+
+/* On normalize les rem */
+html{
+    font-size: 62.5%;
+}
+
+h1,h2,h3 {
+    @include hind;
+    color:$couleur-entete;
+}
+
+h4{
+    font-size: 2rem;
+    @include maj;
+    @include gras;
+    color: $couleur-defaut;
+}
+
+h2{
+    font-size: $up-font-size * 4;
+    padding-bottom: 2rem;
+    @include gras;
+}
+
+p{
+    font-size: $up-font-size * 1.4;
+    line-height: 2.5rem;
+}
+
+/* Nav */
+.navbar{
+    padding: 0.5rem 10%;
+    
+    .navbar-brand{
+        max-width: 300rem;
+        text-align: center;
+        
+        img{
+            width: 23.5rem;
+            @media screen and (max-width: $md){
+                width: 19rem;
+            }
+        }
+        
+        
+    }
+    
+    .nav-link{
+        font-size: $up-font-size * 2;
+        @include gras;
+        
+        
+        @media screen and (max-width: $md){
+            text-align: center;
+        } 
+        
+    }
+    
+}
+
+/* Jumbotron */
+.jumbotron{
+    background-image: url(../img/background-top.jpeg);
+    background-size: cover;
+    min-height: $min-height*1.4;
+    @include none-margin;
+    
+    @media screen and (max-width: $md){
+        min-height: 60rem;
+        text-align: center;
+    }
+    
+    div{
+        @include none-margin;
+        @include gras;
+        width: 60rem;
+        margin-top: 10rem;
+        margin-left: 10rem;
+        
+        @media screen and (max-width: $md){
+            margin-left: 0;
+            width: auto;
+        }
+        
+        h1{
+            font-size: $up-font-size*6.5;
+            @media screen and (max-width: $md){
+                font-size: $up-font-size*5;
+                text-align: left;
+            }
+            @media screen and (max-width: $sm){
+                font-size: $up-font-size*4;
+                text-align: left;
+            }
+        }
+        
+        p{
+            font-size: $up-font-size*1.5;
+            color:$couleur-entete;
+            @media screen and (max-width: $md){
+                font-size: $up-font-size*1.2;
+                text-align: left;
+            }
+        }
+        
+        a{
+            color:white;
+            background-color: $couleur-primaire;
+            @include hind;
+            @include maj;
+            border-radius: 1.8rem;
+            padding: 0.8rem 2.5rem;
+            
+            &:hover{
+                color: $couleur-secondaire;
+            }
+            
+        }
+    }
+
+}
+
+
+
+/* Chapitre */
+#chapitre{
+    h2{
+        color:white;
+    }
+    p{
+        color:white;
+    }
+    div{
+        min-height: $min-height;
+    }
+    
+}
+
+.row{
+        margin-right:0;
+        margin-left:0;
+}
+
+.background-primaire{
+    background-color: $couleur-primaire;
+}
+
+.background-secondaire{
+    background-color: $couleur-secondaire;
+}
+
+.img-humain-red{
+    background-image: url(../img/human-red.png);
+    background-size:cover;
+}
+
+.img-humain-orange{
+    background-image: url(../img/human-orange.png);
+    background-size:cover;
+
+}
+
+.chapitre-text{
+    padding: 10rem;
+    padding-top: 15rem;
+    
+    @media screen and (max-width: $sm){
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 8rem;
+    }
+    
+}
+
+/* Nos service */
+#service{
+    @include padding-bloc;
+    
+    @media screen and (max-width: $lg){
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    @media screen and (max-width: $sm){
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    h2{
+        color:$couleur-secondaire;
+    }
+    > div{
+        display: flex;
+        @media screen and (max-width: $lg){
+                flex-wrap: wrap;
+                justify-content: center;
+        }
+        
+        div{
+            justify-content: space-around;
+            text-align: center;
+            padding:0 2rem;
+            
+            @media screen and (max-width: $lg){
+                max-width: 30rem;
+            }
+            
+            @media screen and (max-width: $md){
+                max-width: inherit;
+            }
+            
+            img{
+                padding-bottom: 1rem;
+            }
+        }
+    }
+    
+}
+
+#realisation{
+    background-color: $couleur-primaire;
+    
+    @media screen and (max-width: $lg) and (min-width: $md){
+        padding-bottom:5rem; 
+    }
+    
+    
+    h4{
+        padding-top:10rem;
+        padding-left:10rem;
+        @media screen and (max-width: $md){
+            padding-left:5rem; 
+        }
+    }
+    h2{
+        padding-left:10rem;
+        color:white; 
+        @media screen and (max-width: $md){
+            padding-left:5rem; 
+        }
+    }
+    
+    > div{
+        display: flex;
+        
+        @media screen and (max-width: $lg){
+                flex-wrap: wrap;
+                justify-content: center;
+        }
+        
+        width: 100%;
+        
+        > div{
+            width: 25%;
+            min-height: 40rem;
+            
+            @media screen and (max-width: $lg){
+                width: 35rem;
+            }
+            
+            @media screen and (max-width: $md){
+                width: inherit;
+            }
+        }
+        
+        .realisation-0{
+            background-image: url(../img/portfolio/showreel-1.jpg);
+            background-size: cover;
+            background-position:center center;
+        }
+        .realisation-1{
+            background-image: url(../img/portfolio/coiffidis-1.jpg);
+            background-size: cover;
+            background-position:center center;
+        }
+        .realisation-2{
+            background-image: url(../img/portfolio/miogo-1.jpg);
+            background-size:cover;
+            background-position:center center;
+        }
+        .realisation-3{
+            background-image: url(../img/portfolio/scamark-1.jpg);
+            background-size: cover;
+            background-position:center center;
+            
+        
+        }
+        
+        article{
+            height: 100%;
+            opacity: 0;
+            width: 100%;
+            transition: opacity 2s;
+            
+            h3{
+                padding-top: 5rem;
+                padding-left: 5rem;
+                color: white;
+            }
+            
+            p{
+                padding-left: 5rem;
+                color: white;
+            }
+              
+            a{
+                color:white;
+                background-color: $couleur-primaire;
+                @include hind;
+                @include maj;
+                border-radius: 1.8rem;
+                padding: 0.8rem 2.5rem;
+                margin-top:60%;
+            
+                @media screen and (max-width: $md){
+                   margin-bottom: 10%; 
+                }
+                
+                &:hover{
+                color: $couleur-secondaire;
+                }
+            }
+            background: radial-gradient(transparent, #9B97B0);
+            &:hover{
+                opacity: 1;
+               
+            }
+            
+        }
+        
+        
+    }
+}
+
+#equipe{
+    @include padding-bloc;
+    
+    @media screen and (max-width: $sm){
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    h2{
+        color:$couleur-secondaire;
+        
+        @media screen and (max-width: $sm){
+            padding-left: 10rem;
+        }
+    }
+    
+    h4{
+        @media screen and (max-width: $sm){
+            padding-left: 10rem;
+        }
+    }
+    
+    
+    > div{
+        @media screen and (max-width: $lg){
+            flex-wrap: wrap;
+        }
+        
+       .media{
+            width: 25rem;
+            @media screen and (max-width: $lg){
+                width: 70%;
+                padding-bottom: 2rem;  
+            }
+            @media screen and (max-width: $md){
+                width: 90%;
+                padding-bottom: 2rem;   
+            }
+            @media screen and (max-width: $sm){
+                width: 110%;
+                padding-bottom: 2rem;  
+            }
+           
+            > div{
+
+                width: 100%;
+
+                h3{
+                    margin-top: 2rem;
+                }
+
+                p{
+                    color: $couleur-defaut;
+                }
+
+                .container {
+
+                    padding: 0 25%;
+
+                    i{
+                        font-size: 2rem;
+                        color: $couleur-defaut;
+                        transition: transform 0.5s;
+
+                        &:hover{
+                            color: $couleur-secondaire;
+                            transform: scale(2); 
+                            box-shadow: 0 0 2rem white;
+                        }
+                    }
+                }
+            }
+
+        } 
+    }
+    
+    
+}
+
+#newsletter{
+    background-color: $couleur-entete;
+    color: white;
+    
+    @include padding-bloc;
+    
+    @media screen and (max-width: $md){
+        padding: 5rem 0;
+    }
+    
+    p{
+        @include maj;
+    }
+    
+    h5{
+        font-size: 2.5rem; 
+    }
+    
+    form{
+        > div{
+            padding: 2rem;
+        }
+        
+        input{
+            border-radius: 1.8rem 0 0 1.8rem;
+            padding:2rem;
+            padding-left: 4rem;
+            
+            @media screen and (max-width: $md){
+                padding:2rem 0;
+            }
+        }
+    
+        button{
+            color:white;
+            background-color: $couleur-primaire;
+            @include hind;
+            @include maj;
+            border-radius: 0 1.8rem 1.8rem 0;
+            width: 15rem;
+            
+            @media screen and (max-width: $md){
+                width: 8rem;
+            }
+            
+            &:hover{
+                color: $couleur-secondaire;
+            }
+        } 
+        
+        @media screen and (max-width: $md){
+        padding:0;
+    }
+    }
+}
+
+footer{
+    div{
+        
+        a{
+            font-size: $up-font-size*1.3;
+            color: $couleur-primaire;
+            &:hover{
+                text-decoration: none;
+                color: $couleur-secondaire;
+            }
+        }
+        
+        &:first-child{
+            padding-left: 2rem;
+            padding-right: 8rem;
+            padding-top: 2rem;
+            
+            p{
+                font-size: $up-font-size*1.3;
+                &:first-child{
+                    color: $couleur-entete;
+                }
+            }
+            
+        }
+        &:last-child{
+            padding-bottom: 2rem;
+        }
+    }
+    img{
+        width: 5%;
+    }
+}

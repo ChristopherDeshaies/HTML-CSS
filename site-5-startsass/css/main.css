@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/*
+Les Variables
+
+Pour écrire une variable en scss:
+$nomDeLaVariable : valeur;
+
+*/
+/* Breakpoint */
+/* 
+Mixins
+Déclaration d'une mixin
+@mixin nom-de-la-mixin { ... }
+*/
+.btn {
+  color: #cccccc;
+  background-color: #f2f0f1;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.btn-secondary {
+  color: #ffffff;
+  background-color: #cccccc;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  color: #cccccc;
+  font-size: 3rem;
+  margin: 5;
+  padding: 0;
+}
+@media screen and (max-width: 575px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Synthaxe imbriquée */
+nav {
+  margin: 1rem 0;
+}
+nav ul li {
+  background-color: #cccccc;
+}
+nav ul li a {
+  color: #ffffff;
+}
+nav ul li a:hover {
+  color: #f2f0f1;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,76 @@
+//Import d'un fichier scss
+@import "variables";
+@import "mixins";
+
+/*
+Les Variables
+
+Pour écrire une variable en scss:
+$nomDeLaVariable : valeur;
+
+*/
+
+$grey: #cccccc;
+$white: #ffffff;
+$whitesmoke : #f2f0f1;
+$initial-font-size: 1rem;
+/* Breakpoint */
+$xs-breakpoint: 575px;
+$sm-breakpoint: 767px;
+
+/* 
+Mixins
+Déclaration d'une mixin
+@mixin nom-de-la-mixin { ... }
+*/
+
+@mixin no-margin{
+    margin:5;
+    padding:0;
+}
+
+@mixin button($color, $background){
+    color: $color;
+    background-color: $background;
+    padding: $initial-font-size * 0.5;
+    border-radius: $initial-font-size;
+}
+
+.btn{
+    @include button($grey, $whitesmoke);
+}
+
+.btn-secondary{
+    @include button($white, $grey);
+}
+
+
+h1{
+    color: $grey;
+    font-size: $initial-font-size * 3;
+    
+    //Application de la mixin : exemple no-margin
+    @include no-margin;
+    
+    // On peut aussi imbriquer des media queries
+    @media screen and (max-width: $xs-breakpoint){
+        font-size: $initial-font-size * 2;
+    }
+}
+
+/* Synthaxe imbriquée */
+
+nav{
+    margin: $initial-font-size 0;
+    ul{
+        li{
+            background-color: $grey;
+            a{
+                color: $white;
+                &:hover{
+                    color: $whitesmoke;
+                }
+            }
+        }
+    }
+}
