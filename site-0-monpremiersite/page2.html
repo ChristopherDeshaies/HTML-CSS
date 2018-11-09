@@ -1,0 +1,308 @@
+<!-- Le doctype permet de savoir quelle version de HTML est utilisé sur la page -->
+<!doctype html>
+
+<!-- L'attribut lang permet de spécifier la langue du document HTML -->
+<html lang="fr">
+    
+    <!-- En-tête de page / Non affiché sur la page -->
+    <head>
+        <!-- Titre de l'onglet -->
+        <title>Ma première page web</title>
+        <!-- Permet d'afficher les caractères spéciaux / Encodage de caractères de la page -->
+        <meta charset="utf-8"/>
+        <!-- Chargement de Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+        <!-- Chargement d'une google font -->
+        <link href="https://fonts.googleapis.com/css?family=Rosario" rel="stylesheet">
+        <!-- chargement de notre feuille de css -->
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    
+    <!-- Le corps de la page -->
+    <body id="debut">
+        <header>
+            <div class="container">
+                <img src="img/pingouin_linux.png"/>
+                <!-- Menu de navigation -->
+                <nav>
+                    <ul>
+                        <!-- Les ancres : on ajoute un id à l'endroit où l'on veut e rendre et on mentionne l'id préfixé du caractère # dans l'attribut href -->
+                        <li><a class="active" href="#presentation">Présentation</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li> <a href="index.html">Vers ma première page</a></li>
+                    </ul>
+                </nav>
+
+                <!-- On positionne le clearfix après le dernier élément flottant et avant la fermeture du conteneur -->
+                <div class="clearfix"></div>
+            </div>
+        </header>
+        
+        <!-- La balise main sert de conteneur au contenu principal de la page 
+        UNE SEULE balise main par page -->
+        <main>
+            
+            <div id="presentation">
+                
+                <p class="welcome"><spam>LES PINGOUINS</spam>
+                </p>
+                <p class="welcome">Bienvenue sur le meilleur site sur le thème des pingouins.
+                </p>
+                
+                <a href="https://fr.wikipedia.org/wiki/Pingouin" target="_blank" class="btn">En savoir plus</a>
+            </div>
+            
+            
+             
+            <div class="row">
+                <!-- La balise figure sert de conteneur à un media (image,vidéo, ...) -->
+                <figure>
+                    <!-- Image -->
+                    <img src="img/fond_pingouin.jpeg" alt="Texte alternatif utile pour l'accessibilité ( laisser vide si pas d'importance pour la comprehension de la page ) " title="Texte affiché au survol de l'image"/>
+                    <!-- Ajouter une legende à l'image -->
+                    <figcaption>Pingouin criant sur sa banquise</figcaption>
+                </figure>
+                <p>
+                    Le pingouin est un oiseau marin de la famille des alcidés, qui se confond souvent avec le manchot. Mais à la différence de ce dernier, le pingouin peut réellement voler. Cependant, le petit pingouin est la seule espèce encore vivante. Il existait une autre espèce de pingouin qui s’est éteinte en 1844 : le grand pingouin.
+                    L’animal possède un ventre de couleur blanche et un bec tout noir. On le reconnaît aussi par son dos trapu. Le pingouin possède des pattes palmées noires. Il mesure environ 40 cm et ne pèse entre 500 et 750 grammes. Ce petit oiseau a une démarche assez maladroite.
+                    En outre, le pingouin dispose d'ailes qui lui permettent de nager et voler. Sa tête et son dos sont de couleur noire, tout comme sa queue, pointue et assez petite.
+                </p>
+                <div class="clearfix"></div>
+            </div>
+            
+            <p>
+                Le pingouin est un oiseau marin de la famille des alcidés, qui se confond souvent avec le manchot. Mais à la différence de ce dernier, le pingouin peut réellement voler. Cependant, le petit pingouin est la seule espèce encore vivante. Il existait une autre espèce de pingouin qui s’est éteinte en 1844 : le grand pingouin.
+                L’animal possède un ventre de couleur blanche et un bec tout noir. On le reconnaît aussi par son dos trapu. Le pingouin possède des pattes palmées noires. Il mesure environ 40 cm et ne pèse entre 500 et 750 grammes. Ce petit oiseau a une démarche assez maladroite.
+                En outre, le pingouin dispose d'ailes qui lui permettent de nager et voler. Sa tête et son dos sont de couleur noire, tout comme sa queue, pointue et assez petite.
+            </p>
+            <!-- video -->
+            <figure>
+                <!-- au lieux de loop pour boucler on peut mettre controls pour controler l'arret ou marche de la vidéo -->
+                <video src="vid/ice_video.mp4" muted autoplay loop controls></video><br>
+                <iframe src="https://www.youtube.com/embed/krErY7ORb2U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </figure>
+
+            <!-- Mais aussi : carte, son, diapo, ... -->
+            <figure>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d161435.83349991683!2d2.653061218483578!3d50.78604833355519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47c2d7b048ecbc97%3A0xb7bd19de7bc0e94!2sM2I+FORMATION%2C+Avenue+de+l&#39;Horizon%2C+Villeneuve-d&#39;Ascq!3m2!1d50.6067587!2d3.153333!4m5!1s0x47dcf2a143ddc329%3A0x7d36c57c08d4ddf4!2s2+Rue+de+Gascogne%2C+59492+Hoymille!3m2!1d50.9699992!2d2.4493308!5e0!3m2!1sfr!2sfr!4v1536586179946" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </figure>
+            
+            
+            
+            <div id="services">
+                
+                <h2>Nos services</h2>
+                
+                <div class="col">
+                    <!-- Affichage d'un icone font Awesome -->
+                    <i class="fas fa-fish"></i>
+                    <h3>Nourriture</h3>
+                    <hr/>
+                    <p>En tant qu’oiseau marin, il peut accéder à une certaine variété de nourriture. Le pingouin mange principalement du poisson et se nourrit occasionnellement de quelques crustacés. Il lui arrive de goûter à des vers marins. Avant d’aller chasser, l’animal accomplit un rite : il se met au sommet d’une falaise et plonge soudainement pour attraper sa proie.</p>
+                </div>
+                <div class="col">
+                    <i class="fas fa-mars"></i><i class="fas fa-venus"></i>
+                    <h3>Reproduction</h3>
+                    <hr/>
+                    <p>
+                    Les pingouins s’accouplent au printemps. Ils ont d’ailleurs pour habitude de rejoindre les falaises de l’Islande pour se reproduire. C'est le mâle qui creuse un trou en guise de nid. La femelle pond mais les deux parents se relaient pour couver l’œuf. La période de couvaison dure entre 26 et 32 jours. A l'âge de 8 semaines, l'oisillon quitte le nid pour rejoindre la mer.
+                    </p>
+                </div>
+                <div class="col">
+                    <i class="fas fa-swimmer"></i>
+                    <h3>Vitesse de nage</h3>
+                    <hr/>
+                    <p>
+                        Estropié, le volatile s'est fait nommer « manchot ». Et c'est vrai que sa démarche claudiquante lui donne une allure pataude. Cela dit, c'est un excellent nageur qui atteint la vitesse de 20 km/h et descend à 80 mètres de profondeur, ça prête moins à la moquerie !
+                    </p>
+                </div>
+                <div class="col">
+                    <i class="fab fa-linux"></i>
+                    <h3>Lieu de vie</h3>
+                    <hr/>
+                    <p>Le pingouin se rencontre dans l'hémisphère nord, du pôle nord à la Bretagne, mais surtout le long de la zone arctique. Aimant se baigner dans l'océan Atlantique, le pingouin se retrouve le long des côtes de l'Amérique du Nord, mais aussi en Islande et en Europe, de la Russie jusqu'au Nord de la France. 
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- Les formulaires -->
+            <form id="contact" method="post" action="fichierDeTraitementDesDonnees.php">
+                
+                <h2>Nous contacter</h2>
+                
+                <div>
+                    <!-- Pour "lier" un label à un input il faut ajouter un attribut for sur le label et un attribut id sur l'input. Les 2 attributs ayant la même valeur -->
+                    <label for="idname">Veuillez choisir un nom d'utilisateur :</label>
+                    <input type="text" id="idname" name="name" placeholder="Un seul mot, en minuscules" required/>*
+                </div>
+                <div>
+                    <label for="labelpassword">Veuillez choisir un mot de passe :</label>
+                    <input type="password" id="labelpassword" name="password" placeholder="Saisir mot de passe" required/>*
+                </div>
+                <!--Zone de text multi-ligne -->
+                <div>
+                    <label for="labeltextarea">Saisir un commentaire :</label>
+                    <textarea id="labeltextarea" name="textarea" rows="4" ></textarea>
+                </div>
+
+                <!-- Liste déroulant -->
+                <div>
+                    <label for="labelCountry">Votre pays</label>
+                    <select id="labelCountry" name="selectCountry">
+                        <option value="it">Italie</option>  
+                        <!-- attribut selected permet de pré selectionner une option de la liste -->
+                        <option value="fr" selected>France</option>
+                        <option value="be">Belgique</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="labelMusique1" name="rock"/>
+                    <label for="labelMusique1" >Rock </label>
+                    <input type="checkbox" id="labelMusique2" name="pop"/>
+                    <label for="labelMusique2" >Pop </label>
+                    <input type="checkbox" id="labelMusique3" name="classique"/>
+                    <label for="labelMusique3" >Classique </label>
+                </div>
+
+                <div>
+                    <!-- les boutons radio doivent avoir le même name pour être rattraché -->
+                    <input type="radio" id="labelHomme" name="genre" value="homme" />
+                    <label for="labelHomme">Homme</label>
+                    <input type="radio" id="labelFemme" name="genre" value="femme"/>
+                    <label for="labelFemme">Femme</label>
+                </div>
+
+                <p>* champs obligatoire</p>
+
+                <div>
+                    <!-- bouton de soumission du formulaire à la page spécifiée dans l'attribut action de la balise form -->
+                    <input type="submit" value="Envoyer"/>
+                </div>
+            </form>
+            
+            <div class="icone-up">
+                <a href="#debut">
+                    <i class="fas fa-angle-up"></i>
+                </a>
+            </div>
+            
+            
+        </main>
+        
+        <!-- Les balises titres -->
+        <!-- Le h1 est UNIQUE dans chaque page -->
+        <h1 align="center">Hello</h1>
+        
+        <!-- Saut de ligne -->
+        <br/>
+        
+        <!-- Balises text/paragraphe -->
+        <p>Super Foufou</p>
+        
+        <!-- Balise lien 
+        L'attribut href contient l'url vers la ressource à consulter 
+        -->
+        <a href="index.html">Vers ma première page</a>
+        
+            <!-- Les balises titres -->
+            <!-- Le h1 est UNIQUE dans chaque page -->
+            <h1>Pingouin</h1>
+            <h2>Pingouin</h2>
+            <h3>Pingouin</h3>
+            <h4>Pingouin</h4>
+            <h5>Pingouin</h5>
+            <h6>Pingouin</h6>
+           
+            <!-- Balises text/paragraphe -->
+            <p>Super Pingouin !</p>
+
+            <!-- Saut de ligne -->
+            <br/>
+            <!-- ON ENTERRE le br pour div -->
+            <div>
+                <!-- Balise lien 
+                L'attribut href contient l'url vers la ressource à consulter 
+                L'attribut target contient la valeur _blank qui permet d'ouvrir le lien dans un nouvel onglet 
+                -->
+                <a href="http://google.fr" target="_blank">Lien vers Google</a>
+            </div>
+
+            <a href="mailto:contact@m2i.fr">Lien vers mon adresse email</a>
+            <!-- On va voir plutard pour afficher le numéro uniquement si on est sur téléphone -->
+            <a href="tel:0123456789">Lien vers un numéro de téléphone</a>
+
+        <!-- Les listes 
+            Non ordonnée (liste à puces) -->
+            <ul>
+                <li>élément de liste 1</li>
+                <li>élément de liste 2</li>
+                <li>élément de liste 3</li>
+            </ul>
+            <!-- Les listes
+            Ordonnée -->
+            <ol>
+                <li>élément de liste 1</li>
+                <li>élément de liste 2</li>
+                <li>
+                    <ol>
+                        <li>sous-élément de liste 1</li>   
+                        <li>sous-élément de liste 2</li> 
+                        <li>sous-élément de liste 3</li> 
+                    </ol>
+                </li>
+            </ol>
+            
+            <!-- Les tableaux -->
+            <div align="center">
+                <table border="5">
+                    <thead>
+                        <tr>
+                            <th colspan="4">CLIM 3000</th>
+                        </tr>
+                        <tr>
+                            <th>Salle</th>
+                            <!-- attribut colspan permet de fusionner plusieurs colonnes entre elles
+                            l'attribut rowspan permet à l'inverse de fusionner des lignes entre elles - SUR LE TD pas le TR -->
+                            <th colspan="2">Temperature/Ressentie</th>
+                            <th>Actif</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Hermitage
+                            </td>
+                            <td colspan="2">
+                                15°C / 12°C
+                            </td>
+                            <td rowspan="2" align="center">
+                                X
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Beaux-Art
+                            </td>
+                            <td colspan="2">
+                                18°C / 20°C
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </body>
+
+</html>

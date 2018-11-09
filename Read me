@@ -1,0 +1,103 @@
+﻿17/09 - Sujet Responsive
+
+Exemple d'animation d'image : tympanus.net
+
+Responsive:
+adaptation
+mobile first
+taille
+résolution
+mediaqueries
+viewport
+css
+bootstrap
+type d'écran
+
+responsable web design -> écran grand -> petit
+mobile first -> écran petit -> grand
+
+5 Catégories:
+- Mobile : < 576 pix (min 320px) - Mobile First taille par défaut
+- Phablet ou mobile paysage : [576pix:768pix[
+- Tablette : [768px:992px[
+- Netbook ou petit écran ordi : [992px:1200px[
+- Grand écran : >=1200px - RWD taille par défaut
+
+18/09 - Bootstrap
+
+Alternative à Bootstrap : 
+-Foundation
+-Bulma
+-roCSSti
+-Knacss
+-Materialize
+-semantic-ui
+-animate.css
+
+Bootstrap:
+Framework CSS
+Templates
+Classes prédéfinies
+CSS prédéfinies
+Colonnes/grille
+SASS -> préprocesseur CSS
+version 4 pour IE11+
+composant
+twitter
+responsive
+CDN
+JS/jQuery
+surcharger
+
+Grille Bootstrap
+
+(grille sur 12 colonnes)
+-------------------------------------
+|  |  |  |  |  |  |  |  |  |  |  |  |  
+|  |  |  |  |  |  |  |  |  |  |  |  |  
+|  |  |  |  |  |  |  |  |  |  |  |  |  
+|  |  |  |  |  |  |  |  |  |  |  |  |  
+|  |  |  |  |  |  |  |  |  |  |  |  |  
+|  |  |  |  |  |  |  |  |  |  |  |  |  
+-------------------------------------
+^
+|
+Une ligne
+
+-------------------------------------
+|----------- ----------- -----------|
+||         | |         | |         ||
+||         | |         | |         ||
+||         | |         | |         ||
+||         | |         | |         ||
+|----------- ----------- -----------|
+-------------------------------------
+
+-------------------------------------
+|----------------------- -----------|
+||                     | |         ||
+||                     | |         ||
+||                     | |         ||
+||                     | |         ||
+|----------------------- -----------|
+-------------------------------------
+
+
+19/09 - Fin Bootstrap et SASS
+
+SASS
+
+Préprocesseur CSS
+    LESS
+    Stylus
+extensions possible : .sass / .scss : +récent avec une synthase très proche de la CSS
+
+Compilation en css avec Koala
+scss -------------------> css
+
+On va voir:
+- variables
+- synthaxe ombriquée
+- mixins
+
+
